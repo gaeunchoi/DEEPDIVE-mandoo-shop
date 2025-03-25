@@ -1,0 +1,84 @@
+* {
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  display: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  /* flex 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* 크기 여백 설정 */
+  width: 50%; 
+  height: 80%;
+  min-height: 500px;
+  padding: 10px;
+
+  /* 기타 설정 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Order title 설정 */
+h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.orderItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderItem > img {
+  width: 40%;
+}
+
+.orderItem > p {
+  margin-bottom: 10px;
+}
+
+.inputOrderInfo {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputOrderInfo > input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+}
+
+main > button {
+  width: 100px;
+  color: white;
+  font-size: 15px;
+  background-color: royalblue;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+main > button:hover {
+  background-color: rgb(53, 81, 165);
+  /* transition: all 1s;?? */
+}
