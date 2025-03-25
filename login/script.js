@@ -1,7 +1,6 @@
 const inputLoginId = document.getElementById("inputLoginId");
 const inputLoginPw = document.getElementById("inputLoginPw");
 const loginBtn = document.getElementById("login");
-const rememberIdChk = document.getElementById("rememberId");
 
 const signupUserInfos = JSON.parse(localStorage.getItem("signupUserInfo"));
 const savedUserId = localStorage.getItem("savedUserId");
@@ -50,7 +49,8 @@ loginBtn.addEventListener("click", () => {
   }
 
   // 아이디 저장
-  rememberIdChk ? localStorage.setItem("savedUserId", loginId) : localStorage.removeItem("savedUserId");
+  const rememberIdChk = document.getElementById("rememberId");
+  rememberIdChk.checked ? localStorage.setItem("savedUserId", loginId) : localStorage.removeItem("savedUserId");
   
   // isLogin으로 탭 껐다 켜도 로그인 유지
   const isLogin = signupUserInfos.find(user => user.id === loginId);
